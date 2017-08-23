@@ -11,8 +11,11 @@ apiServerCertSANs:
 - ${HOST_IP}
 - ${HOST_IP}
 - ${VIRTUAL_IP}
+- hzc0n27
+- 192.168.0.27
 etcd:
   endpoints:
   - http://${HOST_IP}:2379
   - http://${HOST_IP}:2379
   - http://${HOST_IP}:2379
+  - http://192.168.0.27:2379
