@@ -50,10 +50,6 @@ metadata:
     tier: node
     app: flannel
 spec:
-  updateStrategy:
-    rollingUpdate:
-      maxUnavailable: 1
-      type: RollingUpdate
   template:
     metadata:
       labels:
@@ -70,7 +66,7 @@ spec:
       serviceAccountName: flannel
       initContainers:
       - name: install-cni
-        image: blu3gui7ar/flannel-cni:0.0.1
+        image: blu3gui7ar/flannel-cni:0.0.3-amd64
         command: [ "/install-cni.sh" ]
         env:
         - name: CNI_NETWORK_CONFIG
